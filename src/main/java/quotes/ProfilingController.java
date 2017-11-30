@@ -3,8 +3,8 @@ package quotes;
 import lombok.Getter;
 import lombok.Setter;
 
-public class ProfilingController implements ProfilingControllerMBean{
+public class ProfilingController implements ProfilingControllerMBean {
     @Getter
     @Setter
-    private boolean enabled;
+    private boolean enabled = true;
 }
