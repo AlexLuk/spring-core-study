@@ -3,17 +3,20 @@ package quotes;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.annotation.PostConstruct;
+
 public class TerminatorQuoter implements Quoter {
 
     @InjectRandomInt(min = 2, max = 7)
     private int repeat;
 
-    public void init(){
+    @PostConstruct
+    public void init() {
         System.out.println("Phase 2");
         System.out.println(repeat);
     }
 
-    public TerminatorQuoter(){
+    public TerminatorQuoter() {
         System.out.println("Phase 1");
         System.out.println(repeat);
     }
